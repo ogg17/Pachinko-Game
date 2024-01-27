@@ -27,4 +27,12 @@
 
 Данный проект интересен тем, что представляет собой типичный проект в вакууме, который интересно проанализировать.
 
+Gameplay
+======
+
+![Image Sequence_001_0000](https://github.com/ogg17/Pachinko-Game/assets/40641614/d6604c0c-42d9-47fa-8b8a-152ae6f2b8a8)
+
+
+https://github.com/ogg17/Pachinko-Game/assets/40641614/f7d4d0f0-b2c1-4f1a-8cc3-849460de38a0
+
 
