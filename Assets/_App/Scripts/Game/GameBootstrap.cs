@@ -13,6 +13,7 @@ using VgGames.Game.States;
 using VgGames.Game.UI.Buttons;
 using VgGames.Game.UI.GameText;
 using VgGames.Game.UI.Menus;
+using VgGames.Game.UI.TranslatableText;
 
 namespace VgGames.Game
 {
@@ -74,6 +75,7 @@ namespace VgGames.Game
             _monoBehaviours.Add<BaseText>();
             _monoBehaviours.Add<ObstacleMove>();
             _monoBehaviours.Add<SoundPlayer>();
+            _monoBehaviours.Add<TranslatableText>();
         }
 
         private void LateUpdate()

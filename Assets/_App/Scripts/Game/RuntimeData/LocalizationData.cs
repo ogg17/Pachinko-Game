@@ -18,15 +18,15 @@ namespace VgGames.Game.RuntimeData
             { LanguageType.EnglishGb, "en" },
             //{ LanguageType.Dutch, "de" },
             //{ LanguageType.Spanish, "spa" },
-            { LanguageType.Russian, "ru" },
-            { LanguageType.Arabic, "ar" },
-            { LanguageType.Bengali, "bn" },
-            { LanguageType.Turkish, "tr" },
-            { LanguageType.Italian, "it" },
-            { LanguageType.French, "fr" },
-            { LanguageType.Hindi, "hi" },
-            { LanguageType.Kazakh, "kk" },
-            { LanguageType.Portuguese , "pt" }
+            // { LanguageType.Russian, "ru" },
+            // { LanguageType.Arabic, "ar" },
+            // { LanguageType.Bengali, "bn" },
+            // { LanguageType.Turkish, "tr" },
+            // { LanguageType.Italian, "it" },
+            // { LanguageType.French, "fr" },
+            // { LanguageType.Hindi, "hi" },
+            // { LanguageType.Kazakh, "kk" },
+            // { LanguageType.Portuguese , "pt" }
         };
 
         private bool _isLoaded;
@@ -46,7 +46,11 @@ namespace VgGames.Game.RuntimeData
 
         private void LoadLocal(LanguageType l)
         {
-            _local = Json.Deserialize(Resources.Load<TextAsset>(_localName[l]).text + ".json") as Dictionary<string, object>;
+            if(_localName.TryGetValue(l, out var res)) 
+                _local = Json.Deserialize(Resources.Load<TextAsset>(res).text) as Dictionary<string, object>;
+            else
+                _local ??= Json.Deserialize(Resources.Load<TextAsset>(_localName[LanguageType.EnglishGb]).text) 
+                    as Dictionary<string, object>;
         }
 
         public string GetLocale(string name)

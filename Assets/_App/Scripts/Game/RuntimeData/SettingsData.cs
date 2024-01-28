@@ -27,11 +27,12 @@ namespace VgGames.Game.RuntimeData
                 SystemLanguage.English => LanguageType.EnglishGb,
                 SystemLanguage.Russian => LanguageType.Russian,
                 SystemLanguage.Arabic => LanguageType.Arabic,
-                //SystemLanguage.Spanish => LanguageType.Spanish,
-                //SystemLanguage.Dutch => LanguageType.Dutch,
+                SystemLanguage.Spanish => LanguageType.Spanish,
+                SystemLanguage.Dutch => LanguageType.Dutch,
                 SystemLanguage.Turkish => LanguageType.Turkish,
                 SystemLanguage.Italian => LanguageType.Italian,
                 SystemLanguage.French => LanguageType.French,
+                SystemLanguage.Portuguese => LanguageType.Portuguese,
                 _ => LanguageType.EnglishGb
             };
 
@@ -52,8 +53,8 @@ namespace VgGames.Game.RuntimeData
     public enum LanguageType
     {
         EnglishGb,
-        //Dutch,
-        //Spanish,
+        Dutch,
+        Spanish,
         Russian,
         Arabic,
         Bengali,
