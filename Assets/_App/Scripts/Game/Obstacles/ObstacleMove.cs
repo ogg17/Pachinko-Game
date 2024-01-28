@@ -9,19 +9,14 @@ namespace VgGames.Game.Obstacles
         [SerializeField] private Ease ease;
         [SerializeField] private Vector2 end;
         [SerializeField] private float duration;
+        [SerializeField] private float startDuration = 0;
 
         private Vector2 _start;
         private bool _moveToward;
 
-        private void Awake()
-        {
-            _start = transform.position;
-        }
+        private void Awake() => _start = transform.position;
 
-        public void GameActivate()
-        {
-            InvokeRepeating(nameof(Repeat), 0, duration);
-        }
+        public void GameActivate() => InvokeRepeating(nameof(Repeat), startDuration, duration);
 
         private void Repeat()
         {
